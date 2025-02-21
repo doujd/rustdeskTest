@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.qld.remote.desk">
+    package="com.carriez.flutter_hbb">
 
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -42,7 +42,7 @@
         </receiver>
 
         <service
-            android:name="com.carriez.flutter_hbb.InputService"
+            android:name=".InputService"
             android:enabled="true"
             android:exported="false"
             android:label="全来店远控Input"
@@ -85,12 +85,12 @@
             android:theme="@style/Transparent" />
 
         <service
-            android:name="com.carriez.flutter_hbb.MainService"
+            android:name=".MainService"
             android:enabled="true"
             android:foregroundServiceType="mediaProjection" />
 
         <service
-            android:name="com.carriez.flutter_hbb.FloatingWindowService"
+            android:name=".FloatingWindowService"
             android:enabled="true" />
 
         <!--

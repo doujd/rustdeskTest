@@ -597,8 +597,8 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
         initialValue: !_floatingWindowDisabled,
         title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(translate('Floating window')),
-          Text('* ${translate('floating_window_tip')}',
-              style: Theme.of(context).textTheme.bodySmall),
+          // Text('* ${translate('floating_window_tip')}',
+          //     style: Theme.of(context).textTheme.bodySmall),
         ]),
         onToggle: bind.mainIsOptionFixed(key: kOptionDisableFloatingWindow)
             ? null
@@ -787,7 +787,7 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
                 title: Text(translate("Version: ") + version),
                 value: Padding(
                   padding: EdgeInsets.symmetric(vertical: 8),
-                  child: Text('rustdesk.com',
+                  child: Text('',
                       style: TextStyle(
                         decoration: TextDecoration.underline,
                       )),
@@ -800,20 +800,20 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
                   child: Text(_buildDate),
                 ),
                 leading: Icon(Icons.query_builder)),
-            if (isAndroid)
-              SettingsTile(
-                  onPressed: (context) => onCopyFingerprint(_fingerprint),
-                  title: Text(translate("Fingerprint")),
-                  value: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 8),
-                    child: Text(_fingerprint),
-                  ),
-                  leading: Icon(Icons.fingerprint)),
-            SettingsTile(
-              title: Text(translate("Privacy Statement")),
-              onPressed: (context) =>
-                  launchUrlString('https://rustdesk.com/privacy.html'),
-              leading: Icon(Icons.privacy_tip),
+            // if (isAndroid)
+            //   SettingsTile(
+            //       onPressed: (context) => onCopyFingerprint(_fingerprint),
+            //       title: Text(translate("Fingerprint")),
+            //       value: Padding(
+            //         padding: EdgeInsets.symmetric(vertical: 8),
+            //         child: Text(_fingerprint),
+            //       ),
+            //       leading: Icon(Icons.fingerprint)),
+            // SettingsTile(
+            //   title: Text(translate("Privacy Statement")),
+            //   onPressed: (context) =>
+            //       launchUrlString('https://rustdesk.com/privacy.html'),
+            //   leading: Icon(Icons.privacy_tip),
             )
           ],
         ),

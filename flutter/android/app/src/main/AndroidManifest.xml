@@ -37,15 +37,15 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
                 <!--ACTION_BOOT_COMPLETED for debug test on no root device-->
-                <action android:name="com.carriez.flutter_hbb.DEBUG_BOOT_COMPLETED" />
+                <action android:name="com.qld.remote.desk.DEBUG_BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <service
-            android:name=".InputService"
+            android:name="com.carriez.flutter_hbb.InputService"
             android:enabled="true"
             android:exported="false"
-            android:label="RustDesk Input"
+            android:label="全来店远控Input"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
@@ -85,12 +85,12 @@
             android:theme="@style/Transparent" />
 
         <service
-            android:name=".MainService"
+            android:name="com.carriez.flutter_hbb.MainService"
             android:enabled="true"
             android:foregroundServiceType="mediaProjection" />
 
         <service
-            android:name=".FloatingWindowService"
+            android:name="com.carriez.flutter_hbb.FloatingWindowService"
             android:enabled="true" />
 
         <!--

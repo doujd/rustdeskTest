@@ -417,10 +417,10 @@ class ServerModel with ChangeNotifier {
             const SizedBox(width: 10),
             Text("提示"),
           ]),
-          content: Text("确定要启动服务吗?"),
+          content: Text("确定要启动服务吗"),
           actions: [
-            dialogButton("Cancel", onPressed: close, isOutline: true),
-            dialogButton("OK", onPressed: submit),
+            TextButton(onPressed: close, child: Text(translate("Cancel"))),
+            TextButton(onPressed: submit, child: Text(translate("OK"))),
           ],
           onSubmit: submit,
           onCancel: close,

@@ -888,9 +888,9 @@ showInputWarnAlert(FFI ffi) {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(translate("android_input_permission_tip1")),
+          Text("为了让远程设备通过鼠标或触摸屏控制您的安卓设备，你需要允许 全来店远控助手 使用 无障碍 服务。"),
           const SizedBox(height: 10),
-          Text(translate("android_input_permission_tip2")),
+          Text("请在接下来的系统设置页面里，找到并进入[已安装的服务]页面，将[全来店远控助手 Input]服务开启"),
         ],
       ),
       actions: [

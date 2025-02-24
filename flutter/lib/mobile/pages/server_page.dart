@@ -275,6 +275,7 @@ class ScamWarningDialogState extends State<ScamWarningDialog> {
         _countdown--;
         if (_countdown <= 0) {
           timer.cancel();
+          Navigator.of(context).pop();
           _serverModel.toggleService();
         }
       });
